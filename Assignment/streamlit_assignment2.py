@@ -39,8 +39,6 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY',
     if len(data) > 0:  # 데이터가 있는지 확인
         xs = np.linspace(data.min(), data.max(), 200)
         density = gaussian_kde(data)
-
-        '''코드를 작성하시오'''
         axs[0, 1].hist(data, bins=30, density=True, alpha=0.6,
                        color='gray', label='Histogram')
         axs[0, 1].plot(xs, density(xs), color='red',
@@ -55,7 +53,6 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY',
     try:
         df_20th = df.loc["1900":"2000"]
         if not df_20th.empty:
-            '''코드를 작성하시오'''
             axs[1, 0].boxplot(df_20th[sunactivity_col], vert=False)
 
     except:
@@ -107,7 +104,6 @@ try:
     st.sidebar.title('시각화 파라미터 조절')
 
     # 연도 범위 선택
-    '''코드를 작성하시오'''
     year_range = st.sidebar.slider(
         '연도 범위 선택',
         min_value=df.index.min().year,
@@ -140,7 +136,6 @@ try:
     )
 
     # 산점도 투명도 조절
-    '''코드를 작성하시오'''
     point_alpha = st.sidebar.slider(
         '산점도 투명도',
         min_value=0.10,
