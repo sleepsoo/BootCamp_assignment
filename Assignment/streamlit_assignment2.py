@@ -116,7 +116,7 @@ try:
         '히스토그램 구간 수',
         min_value=5,
         max_value=100,
-        value=30
+        value=38
     )
 
     # 추세선 차수 조절
