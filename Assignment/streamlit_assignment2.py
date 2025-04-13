@@ -128,7 +128,7 @@ try:
         '추세선 차수',
         min_value=1,
         max_value=5,
-        value=1
+        value=3
     )
 
     # 산점도 점 크기 조절
@@ -136,7 +136,7 @@ try:
         '산점도 점 크기',
         min_value=5,
         max_value=50,
-        value=10
+        value=26
     )
 
     # 산점도 투명도 조절
